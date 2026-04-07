@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      
+      <fileDesc><!-- description bibliographique du fichier numérique -->
+         
+         <titleStmt><!-- titre, responsable de l'encodage -->
+            <title>La chanson de Roland - laisse 146 et 147</title>
+            <title type="sub">
+               Edition comparative : MS. Digby 23 (Bodleian Library) et MS. de Chteauroux
+            </title>
+            <respStmt>
+               <resp>Encodage XML-TEI par</resp><name>Marie Vielmas</name>
+            </respStmt>
+            <respStmt>
+               <resp>Traduction en français moderne</resp>
+               <name>Pierre Jonin</name>
+            </respStmt>
+         </titleStmt>
+         
+         <publicationStmt><!-- institution qui publie -->
+            <publisher>Ecole nationale des chartes</publisher>
+            <date when="2026-03-31">31 mars 2026</date>
+            <availability status="free">
+            <p></p>
+            </availability>
+         </publicationStmt>
+         
+         <sourceDesc>
+            
+            <msDesc xml:id="MS_Digby_23">
+               
+               <msIdentifier><!-- cote, dépôt (bibliothque, ville), numéro de référence -->
+                  <country>United Kingdom</country>
+                  <settlement>Oxford</settlement>
+                  <institution>Bodleian Libraries, University of Oxford</institution>
+                  <repository>Bodleian Library</repository>
+                  <idno type="shelfmark">MS. Digby 23</idno>
+                  <idno type="SC">1624</idno>
+               </msIdentifier>
+               
+               <msContents>
+                  <summary>
+                     Manuscrit composite en deux parties, célèbre pour sa seconde 
+                     partie qui contient la copie la plus ancienne connue de la 
+                     Chanson de Roland. Rédigée en dialecte anglo-normand, cette 
+                     copie fut probablement produite en Angleterre dans le deuxième 
+                     quart du XIIe siècle, mais sa provenance médiévale demeure 
+                     obscure. La première partie, contenant une traduction latine 
+                     du Timée de Platon, appartint à l'abbaye d'Oseney à partir du 
+                     XIIIe siècle ; que l'abbaye ait également possédé la chanson 
+                     de geste est possible mais non établi.
+                  </summary>
+                  
+                  <msItem n="1" xml:lang="xno" class="#verse #epic">
+                     <!-- Localisation de l'extrait encodé dans le manuscrit-->
+                     <locus from="35v" to="36r">fol. 35v–36r</locus>
+                     
+                     <!-- Identification de l'œuvre -->
+                     <title type="main" xml:lang="fro">La Chanson de Roland</title>
+                     <title type="sub">Laisses 146–147</title>
+                     
+                     <!-- Langue du texte -->
+                     <textLang mainLang="xno">Anglo-normand</textLang>
+                     
+                     <!-- Référence bibliographique / répertoire -->
+                     <bibl>
+                        <ref target="https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4214">
+                           Full catalogue record, Catalogue of Western Medieval 
+                           Manuscripts in Oxford Libraries
+                        </ref>
+                     </bibl>
+                  </msItem>  
+               </msContents>
+               
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <foliation>
+                           Deux foliotations séparées : fols. 1–55 (partie 1) 
+                           et fols. 1–76 (partie 2).
+                        </foliation>
+                     </supportDesc>
+                  </objectDesc>
+                  <bindingDesc>
+                     <binding notBefore="1632" notAfter="1634">
+                        <p>Reliure standard de la collection Digby, exécutée entre 
+                           1632 et 1634 : cuir brun clair, estampé sur chaque plat en 
+                           or avec le grand cachet armorié de 
+                           <persName role="collector">Sir Kenelm Digby</persName>, 
+                           portant ses armes dans un cadre ovale à pointe orné d'une 
+                           couronne de feuilles de laurier, avec la légende 
+                           <q>INSIGNIA KENELMI DIGBY EQVITIS AURATI</q> ; 
+                           deux fermoirs. Dos restauré.</p>
+                     </binding>
+                  </bindingDesc>
+               </physDesc>
+               
+               <history>
+                  <acquisition when="1634">
+                     Donné par Sir Kenelm Digby à la Bodleian Library en 1634.
+                  </acquisition>
+               </history>
+               
+               <!-- Description codicologique de la Part 2 du manuscrit -->
+               <msPart xml:id="MS_Digby_23_Part2">
+                  <msIdentifier>
+                     <altIdentifier type="partial">
+                        <idno>MS. Digby 23, Part 2</idno>
+                     </altIdentifier>
+                  </msIdentifier>
+                  
+                  <!-- Contenu de la partie 2 -->
+                  <msContents>
+                     <msItem xml:id="MS_Digby_23_Part2_item1" xml:lang="xno">
+                        
+                        <!-- Lien vers le facsimilé complet -->
+                        <locus from="1r" to="72r"
+                           facs="https://digital.bodleian.ox.ac.uk/objects/79097275-ef1d-4107-85d3-e8402120f365/">
+                           fols. 1r–72r
+                        </locus>
+                        
+                        <title xml:lang="fro">La Chanson de Roland</title>
+                        <title type="sub">Laisses 146–147</title>
+                        <textLang mainLang="xno">Anglo-normand</textLang>
+                        
+                        <!-- Références bibliographiques -->
+                        <bibl>
+                           <author>R. J. Dean</author> &amp; 
+                           <author>M. Boulton</author>, 
+                           <title>Anglo-Norman literature: a guide to texts 
+                              and manuscripts</title>
+                           (London, 1999), no. 76.
+                        </bibl>
+                        <bibl>
+                           Ed. <editor>I. Short</editor> in 
+                           <title>La Chanson de Roland</title>, 
+                           gen. ed. <editor>Joseph J. Duggan</editor>, 
+                           vol. I (2005), avec une discussion complète de 
+                           la langue du copiste.
+                        </bibl>
+                        <note type="corrections">
+                           Le texte a été corrigé ou révisé à la fin du XIIe siècle 
+                           ou au XIIIe siècle (Short, pp. 103–4).
+                        </note>
+                     </msItem>
+                  </msContents>
+                  
+                  <physDesc>
+                     <objectDesc form="codex">
+                        <supportDesc material="perg">
+                           <support>Parchemin.</support>
+                           <extent>
+                              <measure type="leavesCount" unit="folios">76</measure>
+                              <dimensions type="leaf" unit="mm">
+                                 <height min="170" max="175">c. 170–175</height>
+                                 <width min="120" max="125">c. 120–125</width>
+                              </dimensions>
+                           </extent>
+                           <collation>
+                              <p>1(8)–9(8) (fols. 1–72), suivi de quatre gardes, 
+                                 dont les fols. 73 et 76 forment un bifeuillet médiéval 
+                                 et les fols. 74–75 un bifeuillet de parchemin plus 
+                                 tardif. Le fol. 76 était le contreplat du dos d'une 
+                                 reliure antérieure, portant les traces de rabats de 
+                                 cuir et deux grands trous (présents également au 
+                                 fol. 73), probablement laissés par les chevilles de 
+                                 deux fermoirs à sangle.</p>
+                           </collation>
+                        </supportDesc>
+                        <layoutDesc>
+                           <layout columns="1" ruledLines="27 30" 
+                              writtenLines="27 30">
+                              <p>Réglure à la pointe sèche (drypoint). 
+                                 Une colonne, 27 à 30 lignes. 
+                                 Espace écrit : c. 130–145 × 75–90 mm. 
+                                 Perforations dans les marges extérieures uniquement.</p>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     
+                     <decoDesc>
+                        <decoNote type="initial">
+                           Initiales en rouge (une fois en vert, fol. 39r) 
+                           au début de chaque laisse, avec une décoration 
+                           sporadique et sobre.
+                        </decoNote>
+                     </decoDesc>
+                  </physDesc>
+                  
+                  <additional>
+                     <surrogates>
+                        <!-- Lien vers le fascimilé complet du manuscrit -->
+                        <bibl type="digital-facsimile" subtype="full">
+                           <title>Digital Bodleian</title>
+                           <publisher>Bodleian Libraries, University of Oxford</publisher>
+                           <ref target="https://digital.bodleian.ox.ac.uk/objects/79097275-ef1d-4107-85d3-e8402120f365/">
+                              Facsimilé numérique complet, MS. Digby 23, Part 2
+                           </ref>
+                           <note>Numérisation intégrale de la partie 2, consultable via Digital Bodleian.</note>
+                        </bibl>
+                        
+                        <!-- Lien vers le folio 35v de l'extrait encodé -->
+                        <bibl type="digital-facsimile" subtype="partial">
+                           <title>Digital Bodleian — fol. 35v (laisses 146–147)</title>
+                           <ref target="https://digital.bodleian.ox.ac.uk/objects/79097275-ef1d-4107-85d3-e8402120f365/surfaces/8884b3ec-6f0c-4e56-89f6-1050cf7ef8f9/">
+                              Facsimilé numérique, fol. 35v
+                           </ref>
+                           <note>Surface correspondant au début des laisses 146–147, 
+                              Chanson de Roland.</note>
+                        </bibl>
+                        
+                        <!-- Lien vers le folio 36r de l'extrait encodé -->
+                        <bibl type="digital-facsimile" subtype="partial">
+                           <title>Digital Bodleian — fol. 36r (laisses 146–147)</title>
+                           <ref target="https://digital.bodleian.ox.ac.uk/objects/79097275-ef1d-4107-85d3-e8402120f365/surfaces/cf3e9f31-9c09-49a3-9eb7-e76abb6d56b3/#">
+                              Facsimilé numérique, fol. 36r
+                           </ref>
+                           <note>Surface correspondant au début des laisses 146–147, 
+                              Chanson de Roland.</note>
+                        </bibl>
+                     </surrogates>
+                     
+                     <listBibl>
+                        <bibl type="catalogue">
+                           <title>Summary Catalogue of Western Manuscripts 
+                              in the Bodleian Library</title>
+                           <idno type="SC">1624</idno>
+                        </bibl>
+                        <bibl type="catalogue">
+                           <ref target="https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4214">
+                              Full catalogue record, Catalogue of Western Medieval 
+                              Manuscripts in Oxford Libraries
+                           </ref>
+                        </bibl>
+                     </listBibl>
+                  </additional>
+               </msPart>
+               
+            </msDesc> 
+         </sourceDesc>
+         
+      </fileDesc>
+      
+      <profileDesc>
+         <langUsage>
+            <language ident="xno">Anglo-normand</language>
+         </langUsage>
+         
+         <textClass>
+            <keywords scheme="https://id.loc.gov/authorities/subjects">
+               <term>Chansons de geste</term>
+               <term>Epic poetry, French</term>
+               <term>Manuscripts, Medieval</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      
+   </teiHeader>
+   
+  <text>
+     <front>
+        <!-- Introduction générale du projet -->
+        <div type="introduction" xml:id="introduction">
+           <head>Introduction</head>
+           <p>
+              La <title>Chanson de Roland</title> est la plus ancienne
+              chanson de geste conservée en langue romane. Composée
+              vraisemblablement à la fin du XIe siècle ou au début du
+              XIIe siècle, elle relate la mort du neveu de Charlemagne,
+              Roland, lors de la bataille de Roncevaux (778).
+           </p>
+           <p>
+              Le manuscrit Digby 23, conservé à la Bodleian Library
+              d'Oxford, constitue le témoin le plus ancien et le plus
+              complet de l'œuvre. Rédigé en anglo-normand dans le
+              deuxième quart du XIIe siècle, il a fait l'objet de
+              nombreuses éditions critiques depuis le XIXe siècle.
+           </p>
+           <p>
+              Cette édition numérique présente les laisses 146 et 147,
+              au cœur de l'agonie de Roland, en regard de la version
+              correspondante (laisse 211) du manuscrit de Châteauroux,
+              témoin du XIIIe siècle présentant d'importantes variantes.
+           </p>
+        </div>
+        
+        <div type="section" xml:id="origine-historique">
+         <head>Origine historique</head>
+         <p>La chanson de Rolan se déroule au cours d'un évènement historique : la bataille de 
+            <hi rend="bold">Ronceveaux</hi> du <hi rend="bold">15 août 778</hi>. Au retour de Saragosse en Espagne, 
+            l'armée dirigée par Charlemagne attaque la ville navarraise de Pampelune. Les Vascons (Basques) l'attaquent, 
+            en représailles,lors de son retour vers la France, à Ronceveaux. L'arrière-garde, composée d'un certains 
+            nombre de nobles, dont Roland, décrit alors comme préfet de la marche de Bretagne, est complètement 
+            détruite.Les faits sont racontés dans la <hi rend="bold italic">Vita Karolina Magni</hi> (vers 830) d'Eginhard.</p>
+        </div>
+        
+        <div type="section" xml:id="legende">
+           <head>La légende</head>
+           <p>Roland est le neveu de Charlemagne. les douze pairs et les autres personnages sont : 
+              Olivier, l'archevêque Turpin, le traître Ganelon, le roi des Sarrasins Marsile, etc.</p>
+           <p>Le roi Charlemagne et son armée de Francs combattent en Espagne depuis plusieurs années et Saragosse,
+              tenue par le roi Marsile, lui résiste. Sur le conseil de Roland et Turpin, il envoie Ganelon, 
+              le beau-père de Roland, en émissaire pour négocier la paix avec le roi sarrasin. 
+              Ce dernier profite de son entrevue avec Marsile pour comploter contre le roi franc et son armée. 
+              Roland fait partie de l'arrière-garde lors de la traversée des Pyrénées (sur le conseil de Ganelon), 
+              arrière-garde qui se fait complètement détruire par l'armée de Sarrasins levée par Marsile. 
+              C'est la partie proprement héroïque du récit. Charlemagne finit par retourner en arrière et écraser 
+              les Sarrasins; la trahison de Ganelon est découverte, il est jugé et mis à mort.</p>
+           <p>La version première de <hi rend="italic">La Chanson de Roland</hi>, celle d'Oxford, est datée de ca 1098, dans le contexte 
+              de la première croisade</p>
+        </div>
+        
+        <div type="section" xml:id="tradition-manuscrite">
+           <head>La tradition manuscrite</head>
+           <p>La Chanson de Roland nous est parvenue en quatre <hi rend="bold">manuscrits complets</hi>, répartis en trois versions :</p>
+           <list type="unordered">
+              <item>la version d'Oxford : Oxford,Bodleian Library,Digby 23 (O). Deuxième quart du XIIe siècle, 
+                 anglo-normand.4 002 vers décasyllabiques; 291 laisses assonancéees. <hi rend="bold">Version la plus 
+                 ancienne</hi>,version canonique</item>
+              <item>la version de Venise 4 : Venezia,Biblioteca Nazionale Marciana, Fr. Z. 4 (V4). XIIIe siècle. 
+                 Rédigée en franco-italien. 6 011 vers décasyllabiques; 419 laisses monorimes.</item>
+              <item>la version de Châteauroux-Venise 7. Deux manuscrits : 1.Venezia , Biblioteca Nazionale Marciana,
+                 Fr. Z. 7 (V7). Milieu du XIIIe siècle. 8 395 vers décasullabiques, 445 laisses monorimes 
+                 2.Châteauroux, Médiathèque, 1, (C). Fin du XIIIe siecle. 8 201 vers décasyllabiques; 449 laisses 
+                 monorimes.</item>
+           </list>
+           <p>Trois autres <hi rend="bold">manuscrits incomplets</hi> : Paris, BnF, français 860 (version de Paris, 
+              F/P; francien et traits lorains, seconde moitié du XIIIe siècle); Cambridge, Trinity College Library, 
+              R. 3. 32 (version de Cambridge, T; ouest, fin XVe siècle); Lyon, Bibliothèque municipale, 743 
+              (version de Lyon, L; bourg., XIVe siècle).</p>
+           <p>Trois fragments</p>
+        </div>
+        
+        <div type="section" xml:id="incipit">
+           <head>L'incipit de la version d'Oxford</head>
+           <p>
+              Le texte du MS. Digby 23 s'ouvre sur les vers suivants
+              (fol. <locus target="#f1r">1r</locus>), qui situent
+              immédiatement l'action dans le contexte de la conquête
+              carolingienne de l'Espagne :
+           </p>
+           
+           <quote>
+              <lg type="laisse" n="1">
+                 <l n="1">Carles li reis, nostre emperere magnes,</l>
+                 <l n="2">Set anz tuz pleins ad estet en Espaigne,</l>
+                 <l n="3">Tresqu'en la mer cunquist la tere altaigne.</l>
+                 <l n="4">N'i ad castel ki devant lui remaigne;</l>
+                 <l n="5">Mur ne citet n'i est remés a fraindre,</l>
+                 <l n="6">Fors Sarraguce, ki est en une muntaigne.</l>
+                 <l n="7">Li reis Marsilie la tient, ki Deu nen aimet;</l>
+                 <l n="8">Mahumet sert e Apollin recleimet :</l>
+                 <l n="9">Nes poet guarder que mals ne l'i ateignet.AOI.</l>
+              </lg>
+           </quote>
+        </div>
+        
+        <div type="translation" xml:id="trad_incipit" xml:lang="fr">
+           <head>Traduction</head>
+           <quote>
+              <lg type="laisse" n="1">
+                 <l n="1">Charles le roi, notre grand empereur,</l>
+                 <l n="2">Sept ans tout pleins est resté en Espagne,</l>
+                 <l n="3">Jusqu'à la mer il a conquis la terre haute.</l>
+                 <l n="4">Il n'est château qui devant lui résiste,</l>
+                 <l n="5">Mur ni cité ne reste à prendre,</l>
+                 <l n="6">Sauf Saragosse, qui est sur une montagne.</l>
+                 <l n="7">Le roi Marsile la tient, qui n'aime pas Dieu,</l>
+                 <l n="8">Il sert Mahomet et invoque Apollin :</l>
+                 <l n="9">Il ne peut s'en garder, le mal l'y atteindra.</l>
+              </lg>
+           </quote>
+        </div>
+        
+     </front>
+     
+      <body><!-- structure du texte -->
+         
+         <!-- Version du MS. Digby 23 (Oxford) -->
+         
+         <div type="text" xml:id="Digby23">
+            <head>MS. Digby 23 — Laisses 146 et 147</head>
+            
+            <p>Il s'agit des laisses 146-147 de <hi rend="italic">La Chanson de Roland</hi> d'après la version d'oxfrod. Le texte présenté 
+               est toiletté. Nous avons transcrit le texte tel qu'il apparaît dans le manuscrit.</p>
+            
+            <!-- folio 35v -->
+            <pb n="35v"
+               xml:id="f35v"
+               facs="https://digital.bodleian.ox.ac.uk/objects/79097275-ef1d-4107-85d3-e8402120f365/surfaces/8884b3ec-6f0c-4e56-89f6-1050cf7ef8f9/"/>
+            
+            <div type="laisse" n="146">
+               
+               <lg type="laisse" n="146">
+                  <l n="17"><lb n="1"/>
+                     <hi rend="initial-red">O</hi>liver sent que a mort est ferut
+                  </l>
+                  <l n="18"><lb n="2"/>
+                     Tient Halteclere dunt li acer fut bruns,
+                  </l>
+                  <l n="19"><lb n="3"/>
+                     Fiert Marganices sur l'elme a or agut,
+                  </l>
+                  <l n="20"><lb n="4"/>
+                    E flurs e cristaus en acraventet jus. 
+                  </l>
+                  <l n="21"><lb n="5"/>
+                     Trenchet la teste d'ici qu'as denz menuz,
+                  </l>
+                  <l n="22"><lb n="6"/>
+                     brandist sun colp, si l'ad mort abatut,
+                  </l>
+                  <l n="23"><lb n="7"/>
+                     E dist aprés : "paien, mal aies tu !
+                  </l>
+                  <l n="24"><lb n="8"/>
+                     Iço ne di que Karles n'i ait perdut :
+                  </l>
+                  <l n="25"><lb n="9"/>
+                     Ne a muiler ne a dame qu'aies veüd
+                  </l>
+                  <l n="26"><lb n="10"/>
+                     N'en vanteras el regne dunt tu fus
+                  </l>
+                  <l n="27"><lb n="11"/>
+                     Vaillant a un dener que m'i aies tolut,
+                  </l>
+                  <l n="28"><lb n="12"/>
+                    ne fait damage ne de mei ne d'altrui." 
+                  </l>
+               </lg>
+            </div>
+            
+            <!-- folio 36r -->
+            <pb n="36r"
+               xml:id="f36r"
+               facs="https://digital.bodleian.ox.ac.uk/objects/79097275-ef1d-4107-85d3-e8402120f365/surfaces/cf3e9f31-9c09-49a3-9eb7-e76abb6d56b3/#"/>
+            
+            <div type="laisse" n="147">
+               
+               <lg type="laisse" n="147">
+                  <l n="1"><lb n="1"/>
+                     Aprés escrüet Rolland qu'il li ajut. AOI.
+                  </l>
+                  <l n="2"><lb n="2"/>
+                     <hi rend="initial-red">O</hi>liver sent qu'il est a mort nasfrét,
+                  </l>
+                  <l n="3"><lb n="3"/>
+                     De lui venger ja mais ne li ert sez.
+                  </l>
+                  <l n="4"><lb n="4"/>
+                     En la grant presse or i fiert cume ber,
+                  </l>
+                  <l n="5"><lb n="5"/>
+                     Trenchet ces hanstes et cez escuz buclers
+                  </l>
+                  <l n="6"><lb n="6"/>
+                     E piez e poinz e seles e costez.
+                  </l>
+                  <l n="7"><lb n="7"/>
+                     Ki lui veïst Sarrazins desmembrer,
+                  </l>
+                  <l n="8"><lb n="8"/>
+                     Un mort sur altre geter,
+                  </l>
+                  <l n="9"><lb n="9"/>
+                     De bon vassal li poüst remembrer.
+                  </l>
+                  <l n="10"><lb n="10"/>
+                     L'enseigne Carle n'i volt mie ublier :
+                  </l>
+                  <l n="11"><lb n="11"/>
+                     "Munjoie !" escrïet e haltement et cler;
+                  </l>
+                  <l n="12"><lb n="12"/>
+                     Rolland apelet, sun ami e sun per :
+                  </l>
+                  <l n="13"><lb n="13"/>
+                     "Sire cumpaign, a mei car vus justez !ï
+                  </l>
+                  <l n="14"><lb n="14"/>
+                     A grant dulor ermes hoi desevrez." AOI.
+                  </l>
+               </lg>
+               
+            </div>
+            
+         </div>
+         
+         <!-- MS. de Châteauroux — Laisse 211 -->
+         
+         <div type="text" xml:id="chateauroux">
+            <head>MS. de Châteauroux — Laisse 211</head>
+            
+            <p>Le même passage dans le manuscrit de Châteauroux, laisse 211 (Châteauroux, Médiathèque, 1, f.51v), 
+               d'après l'édition de Jean Subrenat, Paris, Champion Classiques, 2016, p. 304-306. Le texte est reproduit
+               comme dans l'édition, avec les corrections dans le texte même.</p>
+            
+            <!-- folio 35v -->
+            <pb n="1"
+               xml:id="f1"
+               facs="https://mediatheque.ville-chateauroux.fr/fonds-numerises/fonds-tresors-des-bibliotheques-de-chateauroux?galerieLayout=simple&amp;item=it01/tres-se01-im00010"/>
+            
+            <div type="laisse" n="211">
+               
+               <lg type="laisse" n="211">
+                  <l n="1"><lb n="1"/>
+                     Voit Olivers qe a mort est feruz.
+                  </l>
+                  <l n="2"><lb n="2"/>
+                     Tint Hauteclere don l'acer est moluz,
+                  </l>
+                  <l n="3"><lb n="3"/>
+                     Fiert l'augalie sor son eume, irascuz.
+                  </l>
+                  <l n="4"><lb n="4"/>
+                     Pieres et flors l'en a creventez juz.
+                  </l>
+                  <l n="5"><lb n="5"/>
+                     Le chief li fent deci as denz menuz.
+                  </l>
+                  <l n="6"><lb n="6"/>
+                     Aprés li dist : "Paien, mal aies tu(z)!"
+                  </l>
+                  <l n="7"><lb n="7"/>
+                     Je ne di mie Kar[lles] n'i ait perduz,
+                  </l>
+                  <l n="8"><lb n="8"/>
+                    Mais tu nel nonceras el reigne [d]on tu fuz."
+                  </l>
+                  <l n="9"><lb n="9"/>
+                     Puis en apele R[ollant] qe vaigne a luz.
+                  </l>
+                  <l n="10"><lb n="10"/>
+                     Voit Oliver qe mort est feruz,
+                  </l>
+                  <l n="11"><lb n="11"/>
+                     De lui vengier est fortment aveüz.
+                  </l>
+                  <l n="12"><lb n="12"/>
+                     En la grant presse se fiert tot esperduz. 
+                  </l>
+                  <l n="13"><lb n="13"/>
+                     Qi lor veïst Saraçins desronpuz,
+                  </l>
+                  <l n="14"><lb n="14"/>
+                     Un mort sor l'autre a la terre estenduz,
+                  </l>
+                  <l n="15"><lb n="15"/>
+                     De bon vasal remembrer li peüst.
+                  </l>
+                  <l n="16"><lb n="16"/>
+                    L'enseigne Charlle oblier non volt pluz.
+                  </l>
+                  <l n="17"><lb n="17"/>
+                     "Monjoie!" escrie, mot bien coneüz.
+                  </l>
+                  <l n="18"><lb n="18"/>
+                     R[ollant] apele, son ami et son druz,
+                  </l>
+                  <l n="19"><lb n="19"/>
+                     Se li a dit : "Ensçanble n'itons pluz."
+                  </l>
+                  <l n="20"><lb n="20"/>
+                     Li uns a l'autre fait duel qi n'i poit pluz.
+                  </l>
+               </lg>
+            </div>
+         </div>
+            
+            <!-- Traduction en français moderne -->
+            
+            <div type="translation" xml:id="traduction" xml:lang="fr">
+               <head>Traduction en français moderne</head>
+                     
+               <p>Traduction des deux laisses par Pierre Jonin, dans <hi rend="italic">La chanson de Roland</hi>, paris, Folio Classiques, 1979, p.213-215</p>
+            
+            <div type="laisse" n="146" xml:id="trad_l146">
+               <p>
+                  146 Olivier sent qu'il est frappé à mort mais il tient hauteclaire à l'acier bruni et il en frappe
+                  Marganice sur son casque pointu et décoré, dont il jette à terre fleurs et pierrreries. 
+                  Puis il lui fend le crâne jusqu'aux dents de devant et en secouant sa lame, il l'abat raide mort. 
+                  "Maudit sois-tu païen !" lui cire-t-il ensuite. "Je ne prétends pas que Charles n'ait pas perdu 
+                  des siens. Toi, du moins, tu ne te vanteras pas devant une femme ou une dame de ton royaume de 
+                  m'avoir pris la valeur d'un denier, ni d'avoir fait du mal à moi ou à d'autres." Puis il crie à 
+                  Roland de venir l'aider.
+               </p>
+            </div>
+            
+            <div type="laisse" n="147" xml:id="trad_l147">
+               <p>
+                  147 Olivier sent qu'il est blessé à mort mais jamais sa soif de vengeance ne sera assouvie. 
+                  Maintenant au plus fort de la mêlée il frappe en vrai chevalier. Il met en pièce lances et boucliers, 
+                  pieds et poings, selles et échines. Qui l'aurait vu amputer les Sarrasins, jeter cadavre sur cadavre, 
+                  pourrait conserver le souvenir d'un rude guerrier. Mais il ne veut pas oublier le cri de guerre de 
+                  Charles. Il lance "Monjoie" d'une voix haute et sonore puis il appelle Roland, son ami et son pair : 
+                  "Seigneur, mon ami, serrez-vous donc tout contre moi ! Aujourd'hui nous allons terriblement souffrir 
+                  d'être séparés."
+               </p>
+            </div>
+          </div>
+
+      </body>
+     
+  </text>
+   
+</TEI>

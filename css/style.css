@@ -1,0 +1,580 @@
+/* Feuille de style css */
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Variables */
+:root {
+  --c-bordeaux:      #6b0f1a;
+  --c-bordeaux-clair:#9b2335;
+  --c-bordeaux-pale: #c0556a;
+  --c-or:            #9a7b2e;
+
+  --c-fond:          #fcf0cf;
+  --c-fond-alt:      #b1a6a6;
+  --c-bordure:       #d9b0b8;
+
+  --c-texte:         #6b0f1a;
+  --c-gris:          #777;
+  --fonte-titre:     'IM Fell English', Georgia, serif;
+  --fonte-corps:     'Crimson Text', Georgia, serif;
+  --fonte-mono:      'Courier New', monospace;
+  --largeur:         1100px;
+  --rayon:           4px;
+}
+
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+body {
+  font-family: var(--fonte-corps);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  background-color: var(--c-fond);
+  color: var(--c-texte);
+}
+
+a {
+  color: var(--c-bordeaux-clair);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover { color: var(--c-or); }
+
+/* Bandeau image */
+
+..bandeau-image {
+  width: 100%;
+  max-height: 280px;
+  overflow: hidden;
+  display: block;
+}
+
+.bandeau-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* En-tête */
+.site-header {
+  text-align: center;
+  padding: 2.5rem 2rem 1.5rem;
+  background-color: var(--c-fond);
+  border-bottom: 2px solid var(--c-bordure);
+}
+
+.site-header h1 {
+  font-family: var(--fonte-titre);
+  font-size: 2.8rem;
+  color: var(--c-bordeaux);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.sous-titre {
+  font-style: italic;
+  color: var(--c-bordeaux-clair);
+  font-size: 1.1rem;
+}
+
+/* Navigation */
+
+.navbar {
+  background-color: var(--c-fond-alt);
+  border-bottom: 1px solid var(--c-bordure);
+  border-top: 1px solid var(--c-bordure);
+  padding: 0.8rem 2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  max-width: var(--largeur);
+  margin: 0 auto;
+}
+
+.navbar a {
+  color: var(--c-bordeaux);
+  text-decoration: none;
+  font-family: var(--fonte-titre);
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid transparent;
+  border-radius: var(--rayon);
+  transition: all 0.2s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: var(--c-bordeaux);
+  color: #fff;
+  border-color: var(--c-bordeaux);
+}
+
+/* Contenu principal */
+main {
+  max-width: var(--largeur);
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+section {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--c-bordure);
+}
+
+h2 {
+  font-family: var(--fonte-titre);
+  font-size: 1.8rem;
+  color: var(--c-bordeaux);
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--c-bordeaux-pale);
+  display: inline-block;
+}
+
+h3 {
+  font-family: var(--fonte-titre);
+  font-size: 1.3rem;
+  color: var(--c-bordeaux-clair);
+  margin: 1.4rem 0 0.7rem;
+}
+
+p { margin-bottom: 1rem; }
+
+/* Sections front */
+.section-front p {
+  text-align: justify;
+  hyphens: auto;
+  color: var(--c-texte);
+}
+
+/* Section légende */
+.legende-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.legende-image {
+  flex: 0 0 280px;
+}
+
+.legende-image img {
+  width: 100%;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon);
+  box-shadow: 2px 2px 8px rgba(107,15,26,0.1);
+}
+
+.legende-texte {
+  flex: 1;
+}
+
+/* Liste manuscrits */
+.liste-manuscrits {
+  margin: 1rem 0 1.2rem 1.5rem;
+  list-style: disc;
+}
+
+.liste-manuscrits li {
+  margin-bottom: 0.7rem;
+  line-height: 1.6;
+}
+
+/* Description du manuscrit */
+.ms-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ms-bloc {
+  background: var(--c-fond-alt);
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon);
+  padding: 1.4rem 1.6rem;
+}
+
+/* Les trois blocs côte à côte horizontalement */
+.ms-identifier,
+.ms-summary,
+.ms-physdesc {
+  flex: 1;
+}
+
+/* Groupement horizontal des trois blocs */
+.ms-desc > .ms-identifier,
+.ms-desc > .ms-summary,
+.ms-desc > .ms-physdesc {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* sous-conteneur flex pour les 3 blocs */
+.ms-desc {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+}
+
+.ms-identifier { grid-column: 1; }
+.ms-summary    { grid-column: 2; }
+.ms-physdesc   { grid-column: 3; }
+
+/* Images du manuscrit */
+.ms-images {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.ms-figure {
+  flex: 1;
+  max-width: 480px;
+  text-align: center;
+}
+
+.ms-figure img {
+  width: 100%;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon);
+  box-shadow: 2px 2px 8px rgba(107,15,26,0.1);
+}
+
+.ms-figure figcaption {
+  font-size: 0.88rem;
+  color: var(--c-gris);
+  font-style: italic;
+  margin-top: 0.4rem;
+}
+
+.ms-desc dl {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.4rem 0.8rem;
+}
+
+.ms-desc dt {
+  font-weight: 600;
+  color: var(--c-bordeaux);
+  font-size: 0.92rem;
+}
+
+/* Transcription avec image */
+.transcription-wrapper {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.transcription-texte {
+  flex: 1;
+}
+
+.transcription-image {
+  flex: 0 0 320px;
+  position: sticky;
+  top: 1rem;
+}
+
+.transcription-image img {
+  width: 100%;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon);
+  box-shadow: 2px 2px 10px rgba(107,15,26,0.12);
+}
+
+.credit-image {
+  font-size: 0.82rem;
+  color: var(--c-gris);
+  font-style: italic;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+/* Laisses */
+.lien-comparaison {
+  margin: 0 0 1.8rem;
+  font-style: italic;
+  color: var(--c-gris);
+  font-size: 0.98rem;
+}
+
+.laisse {
+  margin-bottom: 2.5rem;
+  padding: 1.6rem 2rem;
+  background: var(--c-fond-alt);
+  border-left: 5px solid var(--c-bordeaux-pale);
+  border-radius: 0 var(--rayon) var(--rayon) 0;
+  box-shadow: 2px 2px 6px rgba(107,15,26,0.06);
+}
+
+.groupe-vers { margin-top: 0.8rem; }
+
+.vers {
+  display: flex;
+  gap: 1.4rem;
+  margin: 0.25rem 0;
+  line-height: 1.7;
+  font-size: 1.08rem;
+}
+
+.num-vers {
+  min-width: 2rem;
+  text-align: right;
+  color: var(--c-bordeaux-pale);
+  font-size: 0.82rem;
+  font-family: var(--fonte-mono);
+  padding-top: 0.3rem;
+  flex-shrink: 0;
+}
+
+.initiale-rouge {
+  color: var(--c-bordeaux);
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: var(--fonte-titre);
+  line-height: 1;
+  float: left;
+  margin-right: 0.05em;
+}
+
+.aoi {
+  text-align: right;
+  font-family: var(--fonte-mono);
+  font-size: 0.85rem;
+  color: var(--c-bordeaux);
+  letter-spacing: 0.15em;
+  margin-top: 0.3rem;
+  font-variant: small-caps;
+}
+
+.small-caps { font-variant: small-caps; }
+
+/* Saut de page */
+.pb {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.2rem 0 0.6rem;
+}
+
+.pb-label {
+  font-family: var(--fonte-mono);
+  font-size: 0.85rem;
+  background: var(--c-bordure);
+  color: var(--c-bordeaux);
+  padding: 0.15rem 0.6rem;
+  border-radius: 3px;
+}
+
+.lien-facs {
+  font-size: 0.85rem;
+  color: var(--c-bordeaux-clair);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--c-bordeaux-clair);
+}
+
+/* Citation incipit */
+blockquote.citation-ms {
+  margin: 1rem 0 1rem 2rem;
+  padding: 1rem 1.5rem;
+  border-left: 3px solid var(--c-bordeaux-pale);
+  background: var(--c-fond-alt);
+  font-style: italic;
+}
+
+/* Image bloc traduction */
+.image-traduction {
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 600px;
+}
+
+.image-traduction img {
+  width: 100%;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon);
+  box-shadow: 2px 2px 8px rgba(107,15,26,0.1);
+}
+
+/* Traduction */
+.traduction p,
+.laisse-trad p {
+  text-align: justify;
+  hyphens: auto;
+  font-style: italic;
+  color: var(--c-bordeaux-clair);
+}
+
+.laisse-trad {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--c-bordure);
+}
+
+/*  Facsimilé Châteauroux  */
+.facs-chateauroux {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.facs-image {
+  flex: 0 0 380px;
+}
+
+.facs-image img {
+  width: 100%;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon);
+  box-shadow: 2px 2px 8px rgba(107,15,26,0.1);
+}
+
+.facs-lien {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.facs-lien p {
+  color: var(--c-gris);
+  font-style: italic;
+}
+
+.btn-externe {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background-color: var(--c-bordeaux);
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--rayon);
+  font-family: var(--fonte-titre);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  transition: background-color 0.2s;
+  max-width: 320px;
+}
+
+.btn-externe:hover {
+  background-color: var(--c-bordeaux-clair);
+  color: #fff;
+}
+
+.btn-externe span {
+  display: block;
+  font-size: 0.88rem;
+  font-family: var(--fonte-corps);
+  font-style: italic;
+  opacity: 0.85;
+  margin-top: 0.2rem;
+}
+
+/* Tableau des variantes */
+.tableau-variantes {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.tableau-variantes thead th {
+  background-color: var(--c-bordeaux);
+  color: #fff;
+  padding: 0.7rem 1rem;
+  text-align: left;
+  font-family: var(--fonte-titre);
+  font-size: 1rem;
+}
+
+.tableau-variantes td {
+  padding: 0.45rem 1rem;
+  border-bottom: 1px solid var(--c-bordure);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.tableau-variantes tr:nth-child(even) td {
+  background-color: var(--c-fond-alt);
+}
+
+.tableau-variantes tr.premier-vers td {
+  border-top: 2px solid var(--c-bordeaux-pale);
+  font-weight: 600;
+}
+
+.num-col {
+  text-align: center;
+  font-family: var(--fonte-mono);
+  font-size: 0.85rem;
+  color: var(--c-bordeaux-clair);
+  width: 3rem;
+}
+
+.variante { color: var(--c-bordeaux); font-style: italic; }
+.lacune   { color: #bbb; }
+
+/* Pied de page */
+.site-footer {
+  background-color: var(--c-bordeaux);
+  color: #f5d0d5;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+
+.site-footer a { color: #fce8ea; }
+
+/* Responsive */
+@media (max-width: 900px) {
+
+  .ms-desc {
+    grid-template-columns: 1fr;
+  }
+  .ms-identifier,
+  .ms-summary,
+  .ms-physdesc { grid-column: 1; }
+  .ms-images   { grid-column: 1; flex-direction: column; }
+
+  .transcription-wrapper {
+    flex-direction: column;
+  }
+  .transcription-image {
+    flex: none;
+    width: 100%;
+    position: static;
+  }
+
+  .legende-wrapper {
+    flex-direction: column;
+  }
+  .legende-image { flex: none; width: 100%; }
+
+  .facs-chateauroux {
+    flex-direction: column;
+  }
+  .facs-image { flex: none; width: 100%; }
+
+  .site-header h1 { font-size: 1.9rem; }
+  .bandeau-image img { height: 180px; }
+}
